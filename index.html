@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>얼쑤! 개인정보처리방침</title>
+<meta name="description" content="얼쑤! 장구 그루브(EOLSSU! : Groove of the Janggu) 개인정보처리방침 — 한국어/English">
+<style>
+  :root{
+    --paper:#EFEDE3;
+    --paper-2:#E7E2D1;
+    --ink:#211E19;
+    --ink-soft:#5B5644;
+    --ink-faint:#8A836D;
+    --accent:#223A5E;
+    --accent-2:#A24425;
+    --line:#D9D3BF;
+    --tag-bg:#E2DCC6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15171B;
+      --paper-2:#1C1F24;
+      --ink:#ECE7DA;
+      --ink-soft:#B4AC98;
+      --ink-faint:#7C7666;
+      --accent:#8FB3DB;
+      --accent-2:#E08F5E;
+      --line:#33363B;
+      --tag-bg:#262A2F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15171B;
+    --paper-2:#1C1F24;
+    --ink:#ECE7DA;
+    --ink-soft:#B4AC98;
+    --ink-faint:#7C7666;
+    --accent:#8FB3DB;
+    --accent-2:#E08F5E;
+    --line:#33363B;
+    --tag-bg:#262A2F;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ background:var(--paper); }
+  body{
+    margin:0;
+    color:var(--ink);
+    font-family:'Noto Sans KR', 'Noto Sans', sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 28px 96px;
+  }
+
+  .doc-head{
+    text-align:center;
+    padding-bottom:28px;
+    border-bottom:3px double var(--line);
+    margin-bottom:36px;
+  }
+  .doc-head .banner{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    margin-bottom:24px;
+    border:1px solid var(--line);
+  }
+  .doc-head h1{
+    font-family:'Gowun Batang', 'Noto Serif KR', serif;
+    font-size:clamp(28px, 5vw, 38px);
+    margin:0 0 6px;
+    text-wrap:balance;
+    letter-spacing:0.01em;
+  }
+  .doc-head .subtitle{
+    font-family:'Gowun Batang', 'Noto Serif KR', serif;
+    font-size:16px;
+    color:var(--ink-soft);
+    margin:0 0 20px;
+  }
+  .meta-line{
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-size:12.5px;
+    color:var(--ink-faint);
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 14px;
+    justify-content:center;
+  }
+  .meta-line span{ white-space:nowrap; }
+
+  .lang-toggle{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin:26px 0 8px;
+  }
+  .lang-toggle button{
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    padding:7px 16px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--paper-2);
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .lang-toggle button[aria-pressed="true"]{
+    background:var(--accent);
+    color:var(--paper);
+    border-color:var(--accent);
+  }
+  .lang-toggle button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+  }
+
+  [data-lang="en"] .lang-ko{ display:none; }
+  [data-lang="ko"] .lang-en{ display:none; }
+
+  article{ margin-top:36px; }
+  section.clause{
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section.clause:last-of-type{ border-bottom:none; }
+
+  .clause-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:10px;
+  }
+  .clause-num{
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-size:12px;
+    color:var(--accent);
+    background:var(--tag-bg);
+    border-radius:5px;
+    padding:2px 7px;
+    flex:none;
+  }
+  .clause-head h2{
+    font-family:'Gowun Batang', 'Noto Serif KR', serif;
+    font-size:19px;
+    margin:0;
+    font-weight:700;
+  }
+  .clause p{
+    margin:0 0 10px;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+  .clause p:last-child{ margin-bottom:0; }
+  .clause ul{
+    margin:0 0 10px;
+    padding-left:20px;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+  .clause li{ margin-bottom:4px; }
+
+  .no-collect{
+    color:var(--accent-2);
+    font-weight:700;
+  }
+
+  table.items{
+    width:100%;
+    border-collapse:collapse;
+    margin:14px 0 16px;
+    font-size:14px;
+  }
+  table.items caption{
+    text-align:left;
+    font-size:12px;
+    color:var(--ink-faint);
+    margin-bottom:6px;
+  }
+  table.items th, table.items td{
+    text-align:left;
+    padding:9px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.items th{
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-weight:500;
+    font-size:11.5px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  table.items td{ color:var(--ink); }
+  .items-wrap{ overflow-x:auto; }
+
+  .badge{
+    display:inline-block;
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-size:10.5px;
+    padding:2px 7px;
+    border-radius:4px;
+    background:var(--tag-bg);
+    color:var(--accent-2);
+    letter-spacing:0.03em;
+  }
+
+  .contact-block{
+    margin-top:8px;
+    padding:14px 16px;
+    background:var(--paper-2);
+    border-radius:8px;
+    font-size:14.5px;
+  }
+  .contact-block a{ color:var(--accent); }
+
+  footer{
+    margin-top:40px;
+    padding-top:22px;
+    border-top:3px double var(--line);
+    text-align:center;
+    font-family:'JetBrains Mono', ui-monospace, monospace;
+    font-size:11.5px;
+    color:var(--ink-faint);
+  }
+
+  @media (max-width:480px){
+    .sheet{ padding:44px 18px 72px; }
+    .clause-head{ flex-wrap:wrap; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="doc-head">
+    <img class="banner" src="eolssu-banner.jpg" alt="EOLSSU! : Groove of the Janggu">
+    <h1>얼쑤! 개인정보처리방침</h1>
+    <div class="subtitle">EOLSSU! : Groove of the Janggu — Privacy Policy</div>
+    <div class="meta-line">
+      <span>시행일 / Effective: 2026-09-02</span>
+      <span>버전 / v1.0</span>
+      <span>문의 / Contact: <a href="mailto:xr_support@underlying.kr" style="color:inherit">xr_support@underlying.kr</a></span>
+    </div>
+  </div>
+
+  <div class="lang-toggle" role="group" aria-label="언어 선택 / Language">
+    <button type="button" data-set-lang="ko" aria-pressed="false">한국어</button>
+    <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+  </div>
+
+  <article>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제1조</span><h2 class="lang-ko">목적</h2><h2 class="lang-en">Purpose</h2></div>
+      <div class="lang-ko">
+        <p>본 개인정보처리방침은 얼쑤! 장구 그루브(이하 "본 서비스")를 운영하는 개발자(이하 "당사")가 Meta Horizon Store를 통해 배포되는 본 서비스 이용 과정에서 이용자의 개인정보를 어떻게 수집·이용·보관·파기하는지를 설명합니다. 본 서비스는 자체 운영 서버 기반의 온라인 리더보드(순위표) 기능을 제공하며, 이 문서는 그 과정에서 당사가 직접 수집하는 정보에 한하여 적용됩니다.</p>
+        <p>Meta Platforms, Inc.가 Meta Horizon OS 및 Meta Quest 기기 운영과 관련하여 별도로 수집하는 정보는 본 방침이 아닌 Meta의 개인정보처리방침이 적용됩니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>This Privacy Policy explains how the developer ("we") of EOLSSU! : Groove of the Janggu (the "App"), distributed through the Meta Horizon Store, collects, uses, retains, and deletes personal information when you use the App's self-hosted online leaderboard feature. This policy covers only information we directly collect through the App.</p>
+        <p>Data collected separately by Meta Platforms, Inc. in connection with Meta Horizon OS or Meta Quest devices is governed by Meta's own privacy policy, not this document.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제2조</span><h2 class="lang-ko">수집하는 개인정보 항목 및 수집방법</h2><h2 class="lang-en">Data Collected and How</h2></div>
+      <div class="lang-ko">
+        <div class="items-wrap">
+        <table class="items">
+          <caption>수집 항목</caption>
+          <thead><tr><th>항목</th><th>수집방법</th><th>수집목적</th></tr></thead>
+          <tbody>
+            <tr><td>사용자 이름(닉네임) <span class="badge">필수</span></td><td>이용자가 앱 내 설정 화면에서 직접 입력</td><td>온라인 리더보드 표시</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>당사는 위 항목 외에 <span class="no-collect">위치정보, 마이크(음성), 헤드셋 카메라(패스스루), 손·신체·시선 추적 데이터, 광고식별자(Advertising ID), 결제정보</span>를 수집하지 않습니다. 기기의 진단·성능 정보 등 Meta Horizon OS 플랫폼 차원에서 처리되는 정보는 당사가 직접 수집·보관하지 않습니다.</p>
+      </div>
+      <div class="lang-en">
+        <div class="items-wrap">
+        <table class="items">
+          <caption>Data collected</caption>
+          <thead><tr><th>Item</th><th>How collected</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Username / nickname <span class="badge">required</span></td><td>Entered directly by the user in the App's settings screen</td><td>Displayed on the online leaderboard</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>We do <span class="no-collect">not</span> collect location data, microphone/voice recordings, headset camera (passthrough) feeds, hand/body/eye tracking data, Advertising ID, or payment information. Platform-level diagnostic data handled by Meta Horizon OS is not collected or stored by us.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제3조</span><h2 class="lang-ko">개인정보의 처리 목적</h2><h2 class="lang-en">Purpose of Processing</h2></div>
+      <div class="lang-ko">
+        <p>수집한 사용자 이름은 다음 목적을 위해서만 처리됩니다.</p>
+        <ul>
+          <li>자체 운영 서버를 통한 온라인 리더보드(순위표) 생성 및 표시</li>
+          <li>부정 이용(비정상적 점수 등) 확인 및 서비스 운영을 위한 최소한의 확인</li>
+        </ul>
+        <p>당사는 이용자의 개인정보를 판매하지 않으며, 목적 외 용도로 이용하거나 제3자에게 제공하지 않습니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>The username we collect is processed only for the following purposes.</p>
+        <ul>
+          <li>Generating and displaying the online leaderboard through our own server</li>
+          <li>Minimal verification needed to operate the service and detect abnormal or fraudulent scores</li>
+        </ul>
+        <p>We do not sell personal information, use it beyond these purposes, or share it with third parties.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제4조</span><h2 class="lang-ko">처리 및 보유 기간</h2><h2 class="lang-en">Retention Period</h2></div>
+      <div class="lang-ko">
+        <p>사용자 이름은 리더보드 표시 목적이 달성될 때까지, 또는 이용자가 삭제를 요청할 때까지 보관됩니다. 이용자가 제7조의 절차에 따라 삭제를 요청하는 경우 당사는 지체 없이(통상 영업일 기준 5일 이내) 해당 정보를 파기합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>The username is retained until the leaderboard purpose is fulfilled or until the user requests deletion. Upon a deletion request made through the procedure in Article 7, we will delete the information without delay, typically within 5 business days.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제5조</span><h2 class="lang-ko">제3자 제공 및 국외 이전</h2><h2 class="lang-en">Third-Party Disclosure &amp; Cross-Border Transfer</h2></div>
+      <div class="lang-ko">
+        <p>당사는 이용자의 개인정보를 원칙적으로 제3자에게 제공하지 않으며, 법령에 특별한 규정이 있거나 수사기관이 적법한 절차에 따라 요구하는 경우에 한하여 예외적으로 제공될 수 있습니다. 현재 이용자의 개인정보는 국외로 이전되지 않습니다. 향후 서버 이전 등으로 국외 이전이 발생하는 경우 사전에 본 방침을 통해 고지합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>We do not disclose personal information to third parties, except where required by law or lawfully requested by an investigative authority. User information is not currently transferred outside the user's home country. If a future server change results in a cross-border transfer, we will announce this in advance through an update to this policy.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제6조</span><h2 class="lang-ko">개인정보의 파기절차 및 방법</h2><h2 class="lang-en">Deletion Procedure and Method</h2></div>
+      <div class="lang-ko">
+        <p>보유 기간이 경과하거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다. 전자적 파일 형태로 저장된 정보는 복구가 불가능한 방법으로 영구 삭제합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>Personal information whose retention period has expired or whose processing purpose has been fulfilled is deleted without delay. Information stored electronically is permanently deleted using methods that make recovery impossible.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제7조</span><h2 class="lang-ko">이용자의 권리와 행사방법</h2><h2 class="lang-en">User Rights and How to Exercise Them</h2></div>
+      <div class="lang-ko">
+        <p>이용자는 언제든지 자신의 개인정보에 대한 열람, 정정, 삭제를 요청할 수 있습니다. 아래 연락처로 요청하시면 본인 확인 절차를 거쳐 지체 없이 조치합니다.</p>
+        <div class="contact-block">삭제·열람·정정 요청: <a href="mailto:xr_support@underlying.kr">xr_support@underlying.kr</a></div>
+      </div>
+      <div class="lang-en">
+        <p>Users may request access to, correction of, or deletion of their personal information at any time. Contact us at the address below; after identity verification, we will act on the request without delay.</p>
+        <div class="contact-block">Access / correction / deletion requests: <a href="mailto:xr_support@underlying.kr">xr_support@underlying.kr</a></div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제8조</span><h2 class="lang-ko">아동의 개인정보보호</h2><h2 class="lang-en">Children's Privacy</h2></div>
+      <div class="lang-ko">
+        <p>본 서비스는 만 14세 미만 아동을 주된 대상으로 하지 않습니다. 만 14세 미만 아동이 법정대리인의 동의 없이 개인정보를 제공한 사실을 인지한 경우, 당사는 해당 정보를 지체 없이 삭제합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>The App is not primarily directed at children under the age of 14. If we become aware that a child under 14 has provided personal information without a parent or guardian's consent, we will delete that information without delay.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제9조</span><h2 class="lang-ko">개인정보의 안전성 확보조치</h2><h2 class="lang-en">Security Measures</h2></div>
+      <div class="lang-ko">
+        <p>당사는 최소한의 항목만을 수집·저장하며, 서버 접근 권한 관리 등 개인정보를 안전하게 관리하기 위해 합리적인 기술적·관리적 조치를 취합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>We collect and store only the minimum necessary information and take reasonable technical and administrative measures, including access controls on our server, to keep it secure.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제10조</span><h2 class="lang-ko">광고식별자 및 Meta 플랫폼 관련 고지</h2><h2 class="lang-en">Advertising ID &amp; Meta Platform Notice</h2></div>
+      <div class="lang-ko">
+        <p>당사는 광고식별자(Advertising ID)를 수집하거나 이용하지 않으며, 수집한 사용자 이름을 다른 영구 기기 식별자나 Meta 계정 데이터와 결합하지 않습니다. 본 서비스는 광고 목적으로 이용자를 프로파일링하지 않습니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>We do not collect or use the Advertising ID, and we do not combine the collected username with any other persistent device identifier or Meta account data. The App does not profile users for advertising purposes.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제11조</span><h2 class="lang-ko">개인정보 보호책임자</h2><h2 class="lang-en">Privacy Contact</h2></div>
+      <div class="lang-ko">
+        <p>개인정보 처리에 관한 문의, 불만 처리, 피해 구제 등을 위한 담당 연락처는 다음과 같습니다.</p>
+        <div class="contact-block">얼쑤! 장구 그루브 개발팀 · 이메일: <a href="mailto:xr_support@underlying.kr">xr_support@underlying.kr</a></div>
+      </div>
+      <div class="lang-en">
+        <p>For inquiries, complaints, or remedies related to the processing of personal information, please contact:</p>
+        <div class="contact-block">EOLSSU! : Groove of the Janggu Team · Email: <a href="mailto:xr_support@underlying.kr">xr_support@underlying.kr</a></div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <div class="clause-head"><span class="clause-num">제12조</span><h2 class="lang-ko">고지의 의무</h2><h2 class="lang-en">Notification of Changes</h2></div>
+      <div class="lang-ko">
+        <p>본 방침의 내용이 변경되는 경우, 변경 사항을 본 페이지를 통해 공지하며 개정 이력을 하단에 표시합니다.</p>
+      </div>
+      <div class="lang-en">
+        <p>If this policy changes, we will announce the changes on this page and record the revision history below.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <footer>
+    <span class="lang-ko">얼쑤! 장구 그루브 — 개인정보처리방침 · 시행일 2026-09-02 · v1.0</span>
+    <span class="lang-en">EOLSSU! : Groove of the Janggu — Privacy Policy · Effective 2026-09-02 · v1.0</span>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var sheet = document.querySelector('.sheet');
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    sheet.setAttribute('data-lang', 'en');
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var lang = btn.getAttribute('data-set-lang');
+        sheet.setAttribute('data-lang', lang);
+        buttons.forEach(function(b){
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
